@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Toolkit;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import javax.swing.Box;
 import javax.swing.JButton;
@@ -36,6 +38,8 @@ public class StartFrame extends JFrame {
 		super("Reel Log");
 		searchText = new JTextField("", 15);
 		searchButton = new JButton("Search");
+
+		signIn= new JLabel("<HTML><U>LOG-IN</U></HTML>", JLabel.RIGHT);
 		String[] choices = {"Actor", "Director", "Movie"};
 		searchType = new JComboBox(choices);
 		siteName = "Reel Log";
@@ -82,7 +86,8 @@ public class StartFrame extends JFrame {
 		int w = screenSize.width/2;
 		centerWhole.setSize(w,h);
 		centerWhole.setBackground(Color.WHITE);
-
+		searchClicked();
+		
 		centerLowerBox.add(searchType);
 		centerLowerBox.add(searchText);
 		centerLowerBox.add(searchButton);
@@ -92,16 +97,40 @@ public class StartFrame extends JFrame {
 	}
 
 	private void buildUpper(){
-		signIn= new JLabel("<HTML><U>LOG-IN</U></HTML>", JLabel.RIGHT);
 		signIn.setFont(new Font("Courier", Font.PLAIN, SIGN_IN_SIZE));
+		signInListen();
+		
 		
 		upperBox.setBackground(upperBarColor);
 		upperBox.add(signIn);
 		northPanel.add(upperBox);
 		
 	}
+	
+	private void signInListen(){
+		signIn.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e){
+				System.out.println("LOG_IN CLICKED");
+			}
+		});
+	}
+	
+	private void searchClicked(){
+		searchButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e){
+				System.out.println("SEARCH!");
+			}
+		});
+	}
+	
+	public String getSearchText(){
+		return searchText.getText();
+	}
 
 	public JComboBox<String> getBox(){
 		return searchType;
 	}
+	
 }
