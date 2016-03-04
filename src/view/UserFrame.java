@@ -1,9 +1,13 @@
 package view;
 
-public class UserFrame {
+import java.util.ArrayList;
+
+import javax.swing.JFrame;
+
+public class UserFrame extends JFrame{
 
 	public UserFrame() {
-		
+		super("Reel Log");
 	}
 	
 }
