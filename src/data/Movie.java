@@ -6,8 +6,10 @@ public class Movie {
 	private int myYear;
 	private int myBoxOffice;
 	private char myMpaa;
+	private String movieID;
 	
-	public Movie(String title, int runTime, int year, int boxOffice, char mpaa) {
+	public Movie(String id, String title, int runTime, int year, int boxOffice, char mpaa) {
+		movieID = id;
 		myTitle = title;
 		myRunTime = runTime;
 		myYear = year;
@@ -34,6 +36,10 @@ public class Movie {
 	
 	public char getMPAA(){
 		return myMpaa;
+	}
+	
+	public String getID(){
+		return movieID;
 	}
 	
 }

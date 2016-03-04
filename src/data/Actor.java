@@ -4,8 +4,10 @@ public class Actor {
 	private String firstName;
 	private String middleName;
 	private String lastName;
+	private String actorID;
 	
-	public Actor(String first, String middle, String last) {
+	public Actor(String id, String first, String middle, String last) {
+		actorID = id;
 		firstName = first;
 		middleName = middle;
 		lastName = last;
@@ -21,6 +23,10 @@ public class Actor {
 	
 	public String getLastName() {
 		return lastName;
+	}
+	
+	public String getID(){
+		return actorID;
 	}
 	
 }
