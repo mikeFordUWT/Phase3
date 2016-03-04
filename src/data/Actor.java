@@ -29,4 +29,15 @@ public class Actor {
 		return actorID;
 	}
 	
+	@Override
+	public String toString(){
+		String str;
+		if(middleName.equals(null)){
+			str = firstName + " " + lastName;
+		} else {
+			str = firstName + " " + middleName + " " + lastName; 
+		}
+		return str;
+	}
+	
 }
