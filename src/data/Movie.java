@@ -57,9 +57,21 @@ public class Movie {
 	@Override
 	public String toString(){
 		String run = String.valueOf((myRunTime/60)) + "hr " + String.valueOf(myRunTime%60) + "mins";
-		
-		return myTitle + "\n" + myMpaa + " | " + run + "\n" 
-				+ myActors.toString() + "\n" + myBoxOffice;
+		String toReturn = myTitle + "\n" + myMpaa + " | " + run + "\n" + getActors(myActors) +
+				"\n" + myBoxOffice;
+		return toReturn;
 	}
 	
+	private String getActors(ArrayList<Actor> inputList) {
+		String str = "";
+		for(int i = 0; i <inputList.size(); i++){
+			if(i!= inputList.size()-1){
+				str += inputList.get(i) + ",";
+			} else {
+				str += inputList.get(i);
+			}
+			
+		}
+		return str;
+	}
 }

@@ -37,7 +37,7 @@ public class Runner {
 		movie.setBackground(Color.WHITE);
 		movie.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		movie.setVisible(true);
-		
+		System.out.println(shining.toString());
 	}
 
 }
