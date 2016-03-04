@@ -66,7 +66,7 @@ public class Movie {
 		String str = "";
 		for(int i = 0; i <inputList.size(); i++){
 			if(i!= inputList.size()-1){
-				str += inputList.get(i) + ",";
+				str += inputList.get(i) + ", ";
 			} else {
 				str += inputList.get(i);
 			}
