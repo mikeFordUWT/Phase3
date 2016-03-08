@@ -39,5 +39,8 @@ public class Runner {
 		movie.setVisible(true);
 		System.out.println(shining.toString());
 	}
+	
+	
+	
 
 }

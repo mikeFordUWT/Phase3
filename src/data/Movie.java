@@ -50,7 +50,7 @@ public class Movie {
 		myActors.add(inputActor);
 	}
 	
-	public ArrayList<Actor> getActors(){
+	public ArrayList<Actor> getActorList(){
 		return myActors;
 	}
 
@@ -62,7 +62,7 @@ public class Movie {
 		return toReturn;
 	}
 	
-	private String getActors(ArrayList<Actor> inputList) {
+	public String getActors(ArrayList<Actor> inputList) {
 		String str = "";
 		for(int i = 0; i <inputList.size(); i++){
 			if(i!= inputList.size()-1){
