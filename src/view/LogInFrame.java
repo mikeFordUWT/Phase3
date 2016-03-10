@@ -37,7 +37,7 @@ public class LogInFrame extends JFrame {
 		super("Reel Log");
 		userName = new JTextField("", 15);
 		passField = new JTextField("", 15);
-		userLabel = new JLabel("Username:");
+		userLabel = new JLabel("Username: ");
 		passLabel = new JLabel("Password: ");
 		logButton = new JButton("Log In");
 		upperBarColor = new Color(164,194,244);
@@ -93,7 +93,9 @@ public class LogInFrame extends JFrame {
 		logButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				System.out.println("LOGIN!!!!!!!!");
+				System.out.println("USER: "+userName.getText());
+				System.out.println("PASS: " + passField.getText());
+				System.out.println("LOGIN!!!!");
 			}
 		});
 	}

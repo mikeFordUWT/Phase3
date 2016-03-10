@@ -33,9 +33,6 @@ public class Runner {
 		shining.addActor(a3);
 		
 		MovieFrame movie = new MovieFrame(shining);
-		movie.setLayout(new BorderLayout());
-		movie.setBackground(Color.WHITE);
-		movie.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		movie.setVisible(true);
 		System.out.println(shining.toString());
 	}
